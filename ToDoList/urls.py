@@ -10,5 +10,5 @@ urlpatterns = router_v1.urls
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('api/v1/todo/', include('todolist.urls')),
+    path('api/v1/todo/', include(urlpatterns)),
 ]
