@@ -3,28 +3,29 @@
 build:
 	docker compose build
 run:
-	docker compose up
+	docker compose up -d
 stop:
+	docker compose stop
+down:
 	docker compose down
 
 # Migration
-# Usage: make makemigrations
-makemigrations:
-	docker compose run --rm todolist sh -c "python manage.py makemigrations"
+# Usage: make migrate
 migrate:
-	docker compose run --rm todolist sh -c "python manage.py migrate"
+	docker compose exec  todolist python manage.py makemigrations
+	docker compose exec  todolist python manage.py migrate
 
 # Fixtures
 # Usage: make fixtures
 fixtures:
-	docker compose run --rm todolist sh -c "python manage.py flush && docker compose run --rm todolist sh -c "python manage.py loaddata fixtures.json
+	docker compose exec todolist python manage.py flush && docker compose exec todolist python manage.py loaddata fixtures.json
 
 # Run tests
 # Usage: make test
 test:
-	docker compose run --rm todolist sh -c "python manage.py test && flake8"
+	docker compose exec todolist python manage.py test
 
 # Run django shell
 # Usage: make shell
 shell:
-	docker compose run --rm todolist sh -c "python manage.py shell"
+	docker compose exec todolist python manage.py shell

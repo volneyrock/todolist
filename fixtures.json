@@ -13,5 +13,38 @@
             "is_staff": true,
             "is_active": true
         }
+    },
+    {
+        "model": "todolist.taskmodel",
+        "pk": "3d96174d-349f-413d-9f94-5d2309fdbd56",
+        "fields": {
+            "title": "Tarefa 1",
+            "description": "Descrição da Tarefa 1",
+            "completed": false,
+            "created_at": "2023-05-20T08:00:00Z",
+            "updated_at": "2023-05-20T08:00:00Z"
+        }
+    },
+    {
+        "model": "todolist.taskmodel",
+        "pk": "7c5d2a0d-397f-4d77-ba61-180a1b6e9a8f",
+        "fields": {
+            "title": "Tarefa 2",
+            "description": "Descrição da Tarefa 2",
+            "completed": true,
+            "created_at": "2023-05-20T09:00:00Z",
+            "updated_at": "2023-05-20T09:00:00Z"
+        }
+    },
+    {
+        "model": "todolist.taskmodel",
+        "pk": "a0b0b5a0-0b7a-4b0a-8b0b-5a0b0b7a4b0a",
+        "fields": {
+            "title": "Tarefa 3",
+            "description": "Descrição da Tarefa 3",
+            "completed": false,
+            "created_at": "2023-05-20T10:00:00Z",
+            "updated_at": "2023-05-20T10:00:00Z"
+        }
     }
 ]

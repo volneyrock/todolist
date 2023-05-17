@@ -15,4 +15,4 @@ RUN poetry install --no-dev
 EXPOSE 8000
 
 # Run app.py when the container launches
-CMD ["gunicorn", "ToDoList.wsgi:application", "-b", "0.0.0.0:8000"]
+CMD ["poetry", "run", "python", "manage.py", "runserver", "0.0.0.0:8000"]
