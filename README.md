@@ -15,7 +15,7 @@ Para rodar o projeto, você precisa ter instalado:
 
     ```bash
     git clone https://github.com/volneyrock/todolist.git
-    cd TodoList
+    cd todolist
     ```
 
 2. Em seguida, crie e inicie os serviços usando o Docker Compose:
