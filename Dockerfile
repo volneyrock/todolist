@@ -4,7 +4,7 @@ FROM python:3.10-slim-buster
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app
-COPY . /app 
+COPY . /app
 
 # Install any needed packages specified in poetry.lock
 RUN pip install poetry
